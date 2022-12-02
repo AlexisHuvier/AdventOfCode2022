@@ -1,10 +1,10 @@
 ﻿namespace AdventOfCode2022.Days;
 
-public class Day1
+public class Day1 : Day
 {
-    public static void Execute()
+    public void Execute()
     {
-        var file = "Resources/1-input.txt";
+        const string file = "Resources/1-input.txt";
         var gobelins = new List<int>();
 
         foreach (var line in File.ReadAllLines(file))

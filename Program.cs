@@ -4,29 +4,33 @@ namespace AdventOfCode2022;
 
 internal class Program
 {
+    static readonly List<Day> Days = new()
+    {
+        new Day1(),
+    };
+
     static void Main()
     {
-        Console.Write("Enter day : ");
-        try
+        while (true)
         {
-            var day = Convert.ToInt32(Console.ReadLine());
-            switch (day)
+            Console.Write("Enter day (or 0 to quit): ");
+            try
             {
-                case 1:
-                    Day1.Execute();
+                var day = Convert.ToInt32(Console.ReadLine());
+                if (day == 0)
                     return;
-                default:
-                    Console.WriteLine("This day doesn't exist");
-                    return;
-            }
-        }
-        catch (Exception ex)            
-        {
-            if (ex is not (FormatException or OverflowException)) throw;
                 
-            Console.WriteLine("Give a valid number for day.");
-            return;
+                if (day > Days.Count)
+                    Console.WriteLine("This day doesn't exist");
+                else
+                    Days[day - 1].Execute();
+            }
+            catch (Exception ex)
+            {
+                if (ex is not (FormatException or OverflowException)) throw;
 
+                Console.WriteLine("Give a valid number for day.");
+            }
         }
     }
 }
