@@ -7,6 +7,7 @@ internal class Program
     static readonly List<Day> Days = new()
     {
         new Day1(),
+        new Day2()
     };
 
     static void Main()
