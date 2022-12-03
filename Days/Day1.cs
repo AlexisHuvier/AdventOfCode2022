@@ -4,10 +4,9 @@ public class Day1 : Day
 {
     public void Execute()
     {
-        const string file = "Resources/1-input.txt";
         var gobelins = new List<int>();
 
-        foreach (var line in File.ReadAllLines(file))
+        foreach (var line in File.ReadAllLines("Resources/1-input.txt"))
         {
             if(line == "" || gobelins.Count == 0)
                 gobelins.Add(0);

@@ -4,11 +4,9 @@ public class Day2: Day
 {
     public void Execute()
     {
-        const string file = "Resources/2-input.txt";
-
         var total = 0;
         
-        foreach (var line in File.ReadAllLines(file))
+        foreach (var line in File.ReadAllLines("Resources/2-input.txt"))
         {
             var opponent = line[0];
             var self = line[2];
@@ -36,7 +34,7 @@ public class Day2: Day
 
         total = 0;
         
-        foreach (var line in File.ReadAllLines(file))
+        foreach (var line in File.ReadAllLines("Resources/2-input.txt"))
         {
             var opponent = line[0];
             var result = line[2];
