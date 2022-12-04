@@ -14,10 +14,10 @@
       <None Update="Resources\2-input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="Resources\2-example.txt">
+      <None Update="Resources\3-input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="Resources\3-input.txt">
+      <None Update="Resources\4-input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>
